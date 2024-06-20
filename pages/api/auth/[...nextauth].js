@@ -19,7 +19,7 @@ export const authOptions = {
     async jwt({ token, user, account }) {
       if (account && user) {
         return {
-          accessToken: account.id_token,
+          accessToken: account.access_token,
           accessTokenExpires: account?.expires_at
             ? account.expires_at * 1000
             : 0,
